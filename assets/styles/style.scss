@@ -1,0 +1,217 @@
+@import "reset";
+@import "variables";
+
+main {
+  display: flex;
+}
+
+.login {
+  background: $whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 33rem;
+  padding: 6rem 4rem 4rem;
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-riot {
+    width: 10.5rem;
+    margin-bottom: 5.5rem;
+  }
+
+  h1 {
+    color: $light-black;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .login-label {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    position: relative;
+
+    span {
+      position: absolute;
+      color: $medium-grey;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin: 1.4rem;
+      cursor: text;
+      transition: all 150ms ease;
+
+      &.span-active {
+        font-size: 0.75rem;
+        margin: 0.2rem 0.6rem;
+      }
+    }
+
+    .input {
+      width: 100%;
+      background: $light-grey;
+      color: $light-black;
+      border: none;
+      border-radius: 0.2rem;
+      font-weight: 600;
+      padding: 1.5rem 0.6rem 0.8rem;
+      transition: all 150ms ease;
+
+      &:hover {
+        background: #e5e5e5;
+      }
+
+      &:focus {
+        background: $whitesmoke;
+      }
+    }
+  }
+
+  .login-icons {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+
+    .social-button {
+      border: none;
+      cursor: pointer;
+      width: 33.33%;
+      height: 2.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.4rem;
+      transition: all 150ms ease;
+
+      &:nth-child(1) {
+        background: $blue;
+
+        &:hover {
+          background: $dark-blue;
+        }
+      }
+
+      &:nth-child(2) {
+        height: 2.5rem;
+        background: $white;
+        border: 1px solid rgba(196, 196, 196, 0.5);
+
+        &:hover {
+          background: $whitesmoke;
+        }
+      }
+
+      &:nth-child(3) {
+        background: $black;
+
+        &:hover {
+          background: $light-black;
+        }
+      }
+
+      img {
+        width: 1.5rem;
+      }
+    }
+  }
+
+  .label-checkbox {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-right: 15.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.4rem;
+    cursor: pointer;
+
+    .input-checkbox {
+      cursor: pointer;
+      appearance: none;
+      width: 1.3rem;
+      height: 1.3rem;
+      background: #e6e6e6;
+      border-radius: 0.3rem;
+
+      &:checked {
+        background: $red;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 3px;
+          height: 6px;
+          border: 2px solid $white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          margin: 1.45px 3px 3px 4px;
+        }
+      }
+    }
+  }
+
+  .login-button {
+    cursor: pointer;
+    width: 4.8rem;
+    height: 4.8rem;
+    margin: 14rem 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 1.5rem;
+    background: $red;
+    transition: all 150ms ease;
+
+    &:hover {
+      background: $dark-red;
+    }
+
+    &:disabled {
+      border: 2px solid #e8e8e8;
+      background: $whitesmoke;
+      cursor: auto;
+
+      svg {
+        fill: #e8e8e8;
+      }
+    }
+
+    svg {
+      width: 1.8rem;
+      fill: $whitesmoke;
+    }
+  }
+
+  .login-links {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $medium-grey;
+    margin-bottom: 0.5rem;
+    transition: all 150ms ease;
+
+    &:hover {
+      color: $light-black;
+    }
+  }
+}
+
+.wallpaper {
+  width: 100%;
+  background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Udyr_0.jpg);
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+}
